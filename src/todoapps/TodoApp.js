@@ -1,4 +1,7 @@
 import React from 'react';
+import Header from './Header'; 
+import TodoList from './TodoList'; 
+import TodoControls from './TodoControls'; 
 
 
 function TodoApp(){
@@ -15,33 +18,27 @@ function TodoApp(){
 
     console.log(newItem.target.value);
     const newTodos = [...defaultTodos, value ]
-    setTodos(newTodos);
+    //setTodos(newTodos);
+
+  }
+
+  const addNewTodo = newTodo => {
+    
+    const newTodos2 = [...defaultTodos, newTodo ]
+    setTodos(newTodos2);
 
   }
 
   return(
     <div>
-        Creating a new ToDo App  <br />
+        
+        <Header></Header>  <br />
 
-        <table style={{ width: '60%' }} className="table" border="1">
-        <thead className="thead-light">
-          <tr>
-            <th>EmpID</th>            
-          </tr>
-        </thead>
-        <tbody>
-          {
-          todos.map((employee) => {
-            return (
-              <tr key={1 + Math.random()}>
-                <td>{employee}</td>              
-              </tr>
-            );
-          })
-          }
-        </tbody>
-      </table>
+        <TodoList todos={todos}></TodoList>  <br />
 
+        <TodoControls addNewTodo={addNewTodo}></TodoControls>
+
+        
           <br/>  <br/>
 
         <input type="text" 
@@ -49,9 +46,10 @@ function TodoApp(){
         />
 
         <button type="submit" name="submit" value="submit"
-              onClick={addNewItem} >
+              onClick={} >
         Add new item
       </button>
+    
 
       </div>
   )
