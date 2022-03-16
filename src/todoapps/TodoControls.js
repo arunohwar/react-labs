@@ -10,7 +10,7 @@ function TodoControls ({addNewTodo}) {
     e.preventDefault();
     //if (!value) return;
     console.log('adding new todo')
-    addNewTodo(newtodo2);
+    addNewTodo(newtodo);
     //setValue("");
   };
 
@@ -24,7 +24,7 @@ function TodoControls ({addNewTodo}) {
 
     <button type="submit" name="submit2" value="submit2"
       onClick={handleSubmit}>
-        Add new todo
+        Add new todo button in child page
       </button>
 
       </div>

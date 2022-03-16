@@ -24,7 +24,7 @@ function TodoApp(){
 
   const addNewTodo = newTodo => {
     
-    const newTodos2 = [...defaultTodos, newTodo ]
+    const newTodos2 = [...todos, newTodo ]
     setTodos(newTodos2);
 
   }
@@ -47,7 +47,7 @@ function TodoApp(){
 
         <button type="submit" name="submit" value="submit"
               onClick={} >
-        Add new item
+        Add new todo button in parent page 
       </button>
     
 
