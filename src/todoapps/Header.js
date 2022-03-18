@@ -1,7 +1,8 @@
 import React from 'react';
+import "./../style.css";
 
 const Header = () => {
-  return <header> Todo App </header>;
+  return <h3 class="center"> The TODO App </h3>;
 };
 
 export default Header;

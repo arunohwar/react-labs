@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './Header'; 
 import TodoList from './TodoList'; 
 import TodoControls from './TodoControls'; 
+import Container from 'react-bootstrap/Container';
+import "./../style.css";
 
 
 function TodoApp(){
@@ -30,28 +32,20 @@ function TodoApp(){
   }
 
   return(
-    <div>
+
+    <Container>
+    <div class="center-screen">
         
-        <Header></Header>  <br />
+        <br></br> <br></br>
+        <Header></Header>  
 
         <TodoList todos={todos}></TodoList>  <br />
 
         <TodoControls addNewTodo={addNewTodo}></TodoControls>
 
-        
-          <br/>  <br/>
-
-        <input type="text" 
-                onChange={e => setValue(e.target.value)}
-        />
-
-        <button type="submit" name="submit" value="submit"
-              onClick={} >
-        Add new todo button in parent page 
-      </button>
-    
-
       </div>
+
+      </Container>
   )
 
 }

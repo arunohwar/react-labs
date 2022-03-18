@@ -1,4 +1,10 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Stack from 'react-bootstrap/Stack';
+import Form from 'react-bootstrap/Form';
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function TodoControls ({addNewTodo}) {
 
@@ -16,18 +22,21 @@ function TodoControls ({addNewTodo}) {
 
   return (
 
-    <div>
+    <div >
 
-    <input type="text" 
-                onChange={e => setNewtodo(e.target.value) }
-        />
+      <Stack direction="horizontal" gap={2} className="col-md-5">
+        <Form.Control  placeholder="Add your new TODO here..." 
+            onChange={e => setNewtodo(e.target.value) } />
 
-    <button type="submit" name="submit2" value="submit2"
-      onClick={handleSubmit}>
-        Add new todo button in child page
-      </button>
+        <Button variant="primary" type="submit" value="Submit"
+            onClick={handleSubmit} >Submit</Button>        
+        <div className="vr" />
+        <Button variant="outline-danger">Reset</Button>
+      </Stack>
 
-      </div>
+   
+
+    </div>
         
   );
 };

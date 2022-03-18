@@ -1,11 +1,12 @@
 import React from 'react';
-import Header from './Header'; 
+
+import Table from 'react-bootstrap/Table';
 
 const TodoList = ({todos}) => {
 
   return(
 
-    <table style={{ width: '60%' }} className="table" border="1">
+    <Table striped bordered hover responsive style={{ width: '42.1%' }} >
         <thead className="thead-light">
           <tr>
             <th>Todo List</th>            
@@ -22,7 +23,7 @@ const TodoList = ({todos}) => {
           })
           }
         </tbody>
-      </table>
+      </Table>
 
   );
 
